@@ -977,7 +977,7 @@ function loadMain() {
 // ============================================================
 function startCounter(dateStr) {
   if (counterTimer) clearInterval(counterTimer);
-  const start = new Date(dateStr);
+  const start = new Date(dateStr.replace(/-/g, '/'));
   function tick() {
     const now = new Date();
     const diff = now - start;
