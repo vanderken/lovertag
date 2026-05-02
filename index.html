@@ -942,6 +942,9 @@ function checkPassword() {
   if (val === currentClient.password) {
     sessionStorage.setItem('lt_auth_' + hash, '1');
     loadMain();
+    document.getElementById('bgMusic').play().catch(()=>{});
+document.getElementById('musicIcon').textContent = '🔇';
+musicPlaying = true;
   } else {
     const inp = document.getElementById('pwInput');
     const err = document.getElementById('pwError');
